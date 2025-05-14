@@ -59,9 +59,9 @@ function loadRiddle() {
   const riddle = riddles[currentRiddle];
   const section = document.getElementById('riddleSection');
   section.innerHTML = `
-    <h2>Ã‰nigme ${riddle.id}: ${riddle.title}</h2>
+    <h2>Énigme ${riddle.id}: ${riddle.title}</h2>
     <p>${riddle.question}</p>
-    <input type="text" id="riddleAnswer" placeholder="Votre rÃ©ponse...">
+    <input type="text" id="riddleAnswer" placeholder="Votre réponse...">
     <button onclick="checkAnswer()">Valider</button>
     <p><em>Indice : ${riddle.hint}</em></p>
   `;
@@ -70,7 +70,7 @@ function loadRiddle() {
 function checkAnswer() {
   const input = document.getElementById('riddleAnswer').value.toLowerCase().trim();
   if (input === riddles[currentRiddle].answer.toLowerCase()) {
-    alert("âœ… Bonne rÃ©ponse !");
+    alert("✅ Bonne réponse !");
     currentRiddle++;
     if (currentRiddle < riddles.length) {
       loadRiddle();
@@ -80,7 +80,7 @@ function checkAnswer() {
       checkMystery(elapsed);
     }
   } else {
-    alert("âŒ Mauvaise rÃ©ponse !");
+    alert("❌ Mauvaise réponse !");
   }
 }
 
@@ -88,9 +88,9 @@ function checkMystery(chrono) {
   const unlock = eval(mysteryMission.condition.replace('chrono', chrono).replace('bonus_found', false));
   if (unlock) {
     document.getElementById('riddleSection').innerHTML = `
-      <h2>ðŸ•µï¸ Mission MystÃ¨re !</h2>
+      <h2>🕵️ Mission Mystère !</h2>
       <p>${mysteryMission.question}</p>
-      <input type="text" id="mysteryAnswer" placeholder="Votre rÃ©ponse...">
+      <input type="text" id="mysteryAnswer" placeholder="Votre réponse...">
       <button onclick="checkMysteryAnswer()">Valider</button>
     `;
   } else {
@@ -111,5 +111,5 @@ function checkMysteryAnswer() {
 }
 
 function endGame() {
-  document.getElementById('riddleSection').innerHTML = "<h2>ðŸŽ‰ Parcours terminÃ© ! Bravo pour votre exploration de Maillol.</h2>";
+  document.getElementById('riddleSection').innerHTML = "<h2>🎉 Parcours terminé ! Bravo pour votre exploration de Maillol.</h2>";
 }
