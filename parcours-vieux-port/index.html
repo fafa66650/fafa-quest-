@@ -2,23 +2,22 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>⚓ Le Secret du Vieux Port</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <img src="assets/logo.png" alt="Logo" class="logo" />
+    <img src="assets/logo.png" alt="Logo FAFA" class="logo" />
     <h1>⚓ Le Secret du Vieux Port</h1>
-    <p>Parcours immersif à Banyuls-sur-Mer entre énigmes, mer et mémoire...</p>
-    <button onclick="startGame()">🚤 Commencer</button>
-    <p id="chrono">⏱ Temps : 00:00</p>
-    <iframe id="map" src="https://www.openstreetmap.org/export/embed.html?bbox=3.127,42.482,3.137,42.490&layer=mapnik&marker=42.486,3.132"></iframe>
-    <audio autoplay loop>
-      <source src="assets/audio.mp3" type="audio/mpeg" />
-    </audio>
+    <p>
+      Une série d’énigmes t’attend sur les quais du port de Banyuls-sur-Mer.<br>
+      Prépare-toi à suivre la trace d’un vieux marin résistant... et à découvrir son ultime secret.
+    </p>
+    <button onclick="startGame()">🚤 Lancer le parcours</button>
+    <div id="chrono">⏱️ Temps : 00:00</div>
   </div>
-  <script src="scripts/script.js"></script>
 </body>
 </html>
