@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Énigme 4</title></head>
+<body>
+  <h2>Énigme 4</h2>
+  <p>Texte fictif pour l’énigme 4.</p>
+  <input id="rep" /><button onclick="valider()">Valider</button>
+  <script>
+    function valider() {
+      const r = document.getElementById('rep').value.toLowerCase();
+      if (r === "réponse4") {
+        location.href = "enigme5.html";
+      } else {
+        alert("Essaie encore !");
+      }
+    }
+  </script>
+</body>
+</html>
