@@ -1,1 +1,34 @@
-<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>FAFA Quest - Maillol</title><link rel="manifest" href="manifest.json"><link rel="stylesheet" href="style.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/></head><body><header><img src="logo.png" alt="FAFA Quest Logo" class="logo"><h1>FAFA QUEST – Maillol</h1><p>Découvre l’univers de Maillol à travers 10 énigmes culturelles.</p></header><main id="startScreen"><form id="playerForm"><label for="mode">Mode de jeu :</label><select id="mode" name="mode" required><option value="famille">Famille</option><option value="groupe">Groupe</option><option value="solo">Solo</option></select><div id="groupDetails" style="display:none;"><label for="groupName">Nom de l'équipe :</label><input type="text" id="groupName" name="groupName"><label for="participantCount">Nombre de participants (max 10) :</label><input type="number" id="participantCount" name="participantCount" min="1" max="10"><div id="participants"></div></div><label for="playerName">Nom du joueur :</label><input type="text" id="playerName" name="playerName" required><button type="submit">Commencer</button></form></main><section id="gameArea" style="display:none;"><div id="map" style="height:300px;"></div><div id="riddleSection"></div><div id="timer">⏱ Temps : <span id="chrono">00:00</span></div></section><script src="config.js"></script><script src="script.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAFA Patrimoine</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 1rem; background: #f2f2f2; text-align: center; }
+    h1 { color: #007acc; }
+    .button-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
+    .btn { background: #007acc; color: white; padding: 1rem; border: none; border-radius: 10px; width: 250px; font-size: 1rem; cursor: pointer; text-decoration: none; }
+    .btn:hover { background: #005c99; }
+  </style>
+</head>
+<body>
+  <h1>🎯 FAFA Patrimoine</h1>
+  <p>Choisissez un parcours à explorer :</p>
+  <div class="button-list">
+    <a class="btn" href="./parcours-atelier-fantome/">Atelier fantôme</a>
+    <a class="btn" href="./parcours-code-fafa-secret/">Code FAFA Secret</a>
+    <a class="btn" href="./parcours-galaxie-fafou/">Galaxie Fafou</a>
+    <a class="btn" href="./parcours-jardin-mediterraneen/">Code du Jardin Méditerranéen</a>
+    <a class="btn" href="./parcours-maillol/">Le mystère de Maillol</a>
+    <a class="btn" href="./parcours-abbe/">Le secret de l'Abbé</a>
+    <a class="btn" href="./parcours-plage-rouge/">Le trésor de la Plage Rouge</a>
+    <a class="btn" href="./parcours-vieux-port/">Les secrets du vieux port</a>
+    <a class="btn" href="./parcours-superun/">Mission Superun</a>
+    <a class="btn" href="./parcours-vin-mystere/">Mission Vin Mystère</a>
+    <a class="btn" href="./parcours-panique-musee/">Panique au Musée</a>
+    <a class="btn" href="./parcours-sentier-littoral/">Sur les traces du sentier littoral</a>
+  </div>
+</body>
+</html>
