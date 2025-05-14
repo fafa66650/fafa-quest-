@@ -1,1 +1,46 @@
-<html><body><h1>Parcours Abbe</h1><p>Contenu à venir...</p></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAFA Quest - Maillol</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="FAFA Quest Logo" class="logo">
+    <h1>FAFA QUEST – Maillol</h1>
+    <p>Découvre l’univers de Maillol à travers 10 énigmes culturelles.</p>
+  </header>
+  <main id="startScreen">
+    <form id="playerForm">
+      <label for="mode">Mode de jeu :</label>
+      <select id="mode" name="mode" required>
+        <option value="famille">Famille</option>
+        <option value="groupe">Groupe</option>
+        <option value="solo">Solo</option>
+      </select>
+      <div id="groupDetails" style="display:none;">
+        <label for="groupName">Nom de l'équipe :</label>
+        <input type="text" id="groupName" name="groupName">
+        <label for="participantCount">Nombre de participants (max 10) :</label>
+        <input type="number" id="participantCount" name="participantCount" min="1" max="10">
+        <div id="participants"></div>
+      </div>
+      <label for="playerName">Nom du joueur :</label>
+      <input type="text" id="playerName" name="playerName" required>
+      <button type="submit">Commencer</button>
+    </form>
+  </main>
+  <section id="gameArea" style="display:none;">
+    <div id="map" style="height:300px;"></div>
+    <div id="riddleSection"></div>
+    <div id="timer">⏱ Temps : <span id="chrono">00:00</span></div>
+  </section>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
