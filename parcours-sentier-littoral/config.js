@@ -1,0 +1,1 @@
+const sentier = 'configuré';
