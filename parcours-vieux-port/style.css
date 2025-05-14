@@ -1,0 +1,41 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #dbeafe, #eff6ff);
+  text-align: center;
+  padding: 60px 20px;
+  color: #1e3a8a;
+}
+.box {
+  background: white;
+  max-width: 700px;
+  margin: auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.08);
+}
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.boussole {
+  width: 80px;
+  animation: spin 12s linear infinite;
+  margin-top: 30px;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+button {
+  padding: 14px 30px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 10px;
+  background: #1d4ed8;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+}
+button:hover {
+  background: #1e3a8a;
+}
