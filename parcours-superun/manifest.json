@@ -1,0 +1,13 @@
+{
+  "name": "Mission Run",
+  "short_name": "Run FAFA",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#dcfce7",
+  "theme_color": "#10b981",
+  "icons": [{
+    "src": "logo.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}
