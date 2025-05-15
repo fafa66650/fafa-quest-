@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Énigme 2</title></head>
+<body>
+  <h2>🔎 Énigme 2</h2>
+  <p>Ceci est l'énigme 2. Résous-la pour continuer.</p>
+  <input id="rep"><button onclick="valider()">Valider</button>
+  <script>
+    function valider() {
+      const reponse = document.getElementById('rep').value.toLowerCase();
+      if (reponse === "réponse2") {
+        location.href = 'enigme3.html';
+      } else {
+        alert("Essaie encore !");
+      }
+    }
+  </script>
+</body>
+</html>
